@@ -1006,7 +1006,7 @@
       "appId": "cd3f3a6d-3d55-4e31-ad50-6a7b06751fe5",
       "currentEnvironmentId": "2ed8fc14-4532-43f1-8cb6-97331472fdae",
       "createdAt": "2023-10-30T19:28:41.318Z",
-      "updatedAt": "2023-10-30T19:51:32.088Z"
+      "updatedAt": "2023-10-30T20:04:01.003Z"
     },
     "dataQueries": [],
     "dataSources": [
@@ -1057,6 +1057,54 @@
         "scope": "local",
         "createdAt": "2023-10-30T19:28:41.420Z",
         "updatedAt": "2023-10-30T19:28:41.420Z"
+      },
+      {
+        "id": "10abef5b-4cca-4a30-bc5a-5506c171fa8c",
+        "name": "restapidefault",
+        "kind": "restapi",
+        "type": "static",
+        "pluginId": null,
+        "appVersionId": "fcb7c74c-6a11-4559-9863-31c1a19743f1",
+        "organizationId": null,
+        "scope": "local",
+        "createdAt": "2023-10-30T20:02:57.361Z",
+        "updatedAt": "2023-10-30T20:02:57.361Z"
+      },
+      {
+        "id": "6fc66420-256f-4975-a220-6280683c428c",
+        "name": "tooljetdbdefault",
+        "kind": "tooljetdb",
+        "type": "static",
+        "pluginId": null,
+        "appVersionId": "fcb7c74c-6a11-4559-9863-31c1a19743f1",
+        "organizationId": null,
+        "scope": "local",
+        "createdAt": "2023-10-30T20:02:57.361Z",
+        "updatedAt": "2023-10-30T20:02:57.361Z"
+      },
+      {
+        "id": "d9ceb31c-58f7-462b-81a4-1422f58cda84",
+        "name": "runjsdefault",
+        "kind": "runjs",
+        "type": "static",
+        "pluginId": null,
+        "appVersionId": "fcb7c74c-6a11-4559-9863-31c1a19743f1",
+        "organizationId": null,
+        "scope": "local",
+        "createdAt": "2023-10-30T20:02:57.361Z",
+        "updatedAt": "2023-10-30T20:02:57.361Z"
+      },
+      {
+        "id": "9c83f711-d9a7-48db-9b69-ca5231f7aba7",
+        "name": "workflowsdefault",
+        "kind": "workflows",
+        "type": "static",
+        "pluginId": null,
+        "appVersionId": "fcb7c74c-6a11-4559-9863-31c1a19743f1",
+        "organizationId": null,
+        "scope": "local",
+        "createdAt": "2023-10-30T20:02:57.361Z",
+        "updatedAt": "2023-10-30T20:02:57.361Z"
       }
     ],
     "appVersions": [
@@ -2053,7 +2101,1002 @@
         "appId": "cd3f3a6d-3d55-4e31-ad50-6a7b06751fe5",
         "currentEnvironmentId": "2ed8fc14-4532-43f1-8cb6-97331472fdae",
         "createdAt": "2023-10-30T19:28:41.318Z",
-        "updatedAt": "2023-10-30T19:51:32.088Z"
+        "updatedAt": "2023-10-30T20:04:01.003Z"
+      },
+      {
+        "id": "fcb7c74c-6a11-4559-9863-31c1a19743f1",
+        "name": "v2",
+        "definition": {
+          "showViewerNavigation": true,
+          "homePageId": "79a17608-e888-453f-bd92-a817beab57dc",
+          "pages": {
+            "79a17608-e888-453f-bd92-a817beab57dc": {
+              "components": {
+                "ba4b5a86-15df-4388-a43c-58a220079e3d": {
+                  "component": {
+                    "properties": {
+                      "title": {
+                        "type": "string",
+                        "displayName": "Title",
+                        "validation": {
+                          "schema": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "data": {
+                        "type": "code",
+                        "displayName": "Table data",
+                        "validation": {
+                          "schema": {
+                            "type": "array",
+                            "element": {
+                              "type": "object"
+                            },
+                            "optional": true
+                          }
+                        }
+                      },
+                      "loadingState": {
+                        "type": "toggle",
+                        "displayName": "Loading state",
+                        "validation": {
+                          "schema": {
+                            "type": "boolean"
+                          }
+                        }
+                      },
+                      "columns": {
+                        "type": "array",
+                        "displayName": "Table Columns"
+                      },
+                      "useDynamicColumn": {
+                        "type": "toggle",
+                        "displayName": "Use dynamic column",
+                        "validation": {
+                          "schema": {
+                            "type": "boolean"
+                          }
+                        }
+                      },
+                      "columnData": {
+                        "type": "code",
+                        "displayName": "Column data"
+                      },
+                      "rowsPerPage": {
+                        "type": "code",
+                        "displayName": "Number of rows per page",
+                        "validation": {
+                          "schema": {
+                            "type": "union",
+                            "schemas": [
+                              {
+                                "type": "string"
+                              },
+                              {
+                                "type": "number"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "enableNextButton": {
+                        "type": "toggle",
+                        "displayName": "Enable next page button",
+                        "validation": {
+                          "schema": {
+                            "type": "boolean"
+                          }
+                        }
+                      },
+                      "enabledSort": {
+                        "type": "toggle",
+                        "displayName": "Enable column sorting",
+                        "validation": {
+                          "schema": {
+                            "type": "boolean"
+                          }
+                        }
+                      },
+                      "hideColumnSelectorButton": {
+                        "type": "toggle",
+                        "displayName": "Hide column selector button",
+                        "validation": {
+                          "schema": {
+                            "type": "boolean"
+                          }
+                        }
+                      },
+                      "enablePrevButton": {
+                        "type": "toggle",
+                        "displayName": "Enable previous page button",
+                        "validation": {
+                          "schema": {
+                            "type": "boolean"
+                          }
+                        }
+                      },
+                      "totalRecords": {
+                        "type": "code",
+                        "displayName": "Total records server side",
+                        "validation": {
+                          "schema": {
+                            "type": "union",
+                            "schemas": [
+                              {
+                                "type": "string"
+                              },
+                              {
+                                "type": "number"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "enablePagination": {
+                        "type": "toggle",
+                        "displayName": "Enable pagination",
+                        "validation": {
+                          "schema": {
+                            "type": "boolean"
+                          }
+                        }
+                      },
+                      "serverSidePagination": {
+                        "type": "clientServerSwitch",
+                        "displayName": "Type",
+                        "validation": {
+                          "schema": {
+                            "type": "boolean"
+                          }
+                        },
+                        "options": [
+                          {
+                            "displayName": "Client side",
+                            "value": "clientSide"
+                          },
+                          {
+                            "displayName": "Server side",
+                            "value": "serverSide"
+                          }
+                        ]
+                      },
+                      "serverSideSearch": {
+                        "type": "clientServerSwitch",
+                        "displayName": "Type",
+                        "options": [
+                          {
+                            "displayName": "Client side",
+                            "value": "clientSide"
+                          },
+                          {
+                            "displayName": "Server side",
+                            "value": "serverSide"
+                          }
+                        ],
+                        "validation": {
+                          "schema": {
+                            "type": "boolean"
+                          }
+                        }
+                      },
+                      "serverSideSort": {
+                        "type": "clientServerSwitch",
+                        "displayName": "Type",
+                        "validation": {
+                          "schema": {
+                            "type": "boolean"
+                          }
+                        },
+                        "options": [
+                          {
+                            "displayName": "Client side",
+                            "value": "clientSide"
+                          },
+                          {
+                            "displayName": "Server side",
+                            "value": "serverSide"
+                          }
+                        ]
+                      },
+                      "serverSideFilter": {
+                        "type": "clientServerSwitch",
+                        "displayName": "Type",
+                        "validation": {
+                          "schema": {
+                            "type": "boolean"
+                          }
+                        },
+                        "options": [
+                          {
+                            "displayName": "Client side",
+                            "value": "clientSide"
+                          },
+                          {
+                            "displayName": "Server side",
+                            "value": "serverSide"
+                          }
+                        ],
+                        "defaultValue": "clientSide"
+                      },
+                      "actionButtonBackgroundColor": {
+                        "type": "color",
+                        "displayName": "Background color",
+                        "validation": {
+                          "schema": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "actionButtonTextColor": {
+                        "type": "color",
+                        "displayName": "Text color",
+                        "validation": {
+                          "schema": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "displaySearchBox": {
+                        "type": "toggle",
+                        "displayName": "Show search",
+                        "validation": {
+                          "schema": {
+                            "type": "boolean"
+                          }
+                        }
+                      },
+                      "showDownloadButton": {
+                        "type": "toggle",
+                        "displayName": "Show download button",
+                        "validation": {
+                          "schema": {
+                            "type": "boolean"
+                          }
+                        }
+                      },
+                      "showFilterButton": {
+                        "type": "toggle",
+                        "displayName": "Enable filtering",
+                        "validation": {
+                          "schema": {
+                            "type": "boolean"
+                          }
+                        }
+                      },
+                      "showBulkUpdateActions": {
+                        "type": "toggle",
+                        "displayName": "Show update buttons",
+                        "validation": {
+                          "schema": {
+                            "type": "boolean"
+                          }
+                        }
+                      },
+                      "allowSelection": {
+                        "type": "toggle",
+                        "displayName": "Allow selection",
+                        "validation": {
+                          "schema": {
+                            "type": "boolean"
+                          }
+                        }
+                      },
+                      "showBulkSelector": {
+                        "type": "toggle",
+                        "displayName": "Bulk selection",
+                        "validation": {
+                          "schema": {
+                            "type": "boolean"
+                          }
+                        }
+                      },
+                      "highlightSelectedRow": {
+                        "type": "toggle",
+                        "displayName": "Highlight selected row",
+                        "validation": {
+                          "schema": {
+                            "type": "boolean"
+                          }
+                        }
+                      },
+                      "defaultSelectedRow": {
+                        "type": "code",
+                        "displayName": "Default selected row",
+                        "validation": {
+                          "schema": {
+                            "type": "object"
+                          }
+                        }
+                      },
+                      "showAddNewRowButton": {
+                        "type": "toggle",
+                        "displayName": "Show add new row button",
+                        "validation": {
+                          "schema": {
+                            "type": "boolean"
+                          }
+                        }
+                      }
+                    },
+                    "general": {
+                      "tooltip": {
+                        "type": "code",
+                        "displayName": "Tooltip",
+                        "validation": {
+                          "schema": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "others": {
+                      "showOnDesktop": {
+                        "type": "toggle",
+                        "displayName": "Show on desktop "
+                      },
+                      "showOnMobile": {
+                        "type": "toggle",
+                        "displayName": "Show on mobile"
+                      }
+                    },
+                    "events": {
+                      "onRowHovered": {
+                        "displayName": "Row hovered"
+                      },
+                      "onRowClicked": {
+                        "displayName": "Row clicked"
+                      },
+                      "onBulkUpdate": {
+                        "displayName": "Save changes"
+                      },
+                      "onPageChanged": {
+                        "displayName": "Page changed"
+                      },
+                      "onSearch": {
+                        "displayName": "Search"
+                      },
+                      "onCancelChanges": {
+                        "displayName": "Cancel changes"
+                      },
+                      "onSort": {
+                        "displayName": "Sort applied"
+                      },
+                      "onCellValueChanged": {
+                        "displayName": "Cell value changed"
+                      },
+                      "onFilterChanged": {
+                        "displayName": "Filter changed"
+                      },
+                      "onNewRowsAdded": {
+                        "displayName": "Add new rows"
+                      }
+                    },
+                    "styles": {
+                      "textColor": {
+                        "type": "color",
+                        "displayName": "Text Color",
+                        "validation": {
+                          "schema": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "actionButtonRadius": {
+                        "type": "code",
+                        "displayName": "Action Button Radius",
+                        "validation": {
+                          "schema": {
+                            "type": "union",
+                            "schemas": [
+                              {
+                                "type": "string"
+                              },
+                              {
+                                "type": "boolean"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "tableType": {
+                        "type": "select",
+                        "displayName": "Table type",
+                        "options": [
+                          {
+                            "name": "Bordered",
+                            "value": "table-bordered"
+                          },
+                          {
+                            "name": "Regular",
+                            "value": "table-classic"
+                          },
+                          {
+                            "name": "Striped",
+                            "value": "table-striped"
+                          }
+                        ],
+                        "validation": {
+                          "schema": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "cellSize": {
+                        "type": "select",
+                        "displayName": "Cell size",
+                        "options": [
+                          {
+                            "name": "Condensed",
+                            "value": "condensed"
+                          },
+                          {
+                            "name": "Regular",
+                            "value": "regular"
+                          }
+                        ],
+                        "validation": {
+                          "schema": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "borderRadius": {
+                        "type": "code",
+                        "displayName": "Border Radius",
+                        "validation": {
+                          "schema": {
+                            "type": "union",
+                            "schemas": [
+                              {
+                                "type": "string"
+                              },
+                              {
+                                "type": "number"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "visibility": {
+                        "type": "toggle",
+                        "displayName": "Visibility",
+                        "validation": {
+                          "schema": {
+                            "type": "boolean"
+                          }
+                        }
+                      },
+                      "disabledState": {
+                        "type": "toggle",
+                        "displayName": "Disable",
+                        "validation": {
+                          "schema": {
+                            "type": "boolean"
+                          }
+                        }
+                      }
+                    },
+                    "validate": true,
+                    "generalStyles": {
+                      "boxShadow": {
+                        "type": "boxShadow",
+                        "displayName": "Box Shadow"
+                      }
+                    },
+                    "definition": {
+                      "others": {
+                        "showOnDesktop": {
+                          "value": "{{true}}"
+                        },
+                        "showOnMobile": {
+                          "value": "{{false}}"
+                        }
+                      },
+                      "events": [],
+                      "styles": {
+                        "textColor": {
+                          "value": "#000"
+                        },
+                        "actionButtonRadius": {
+                          "value": "0"
+                        },
+                        "visibility": {
+                          "value": "{{true}}"
+                        },
+                        "disabledState": {
+                          "value": "{{false}}"
+                        },
+                        "cellSize": {
+                          "value": "regular"
+                        },
+                        "borderRadius": {
+                          "value": "0"
+                        },
+                        "tableType": {
+                          "value": "table-classic"
+                        }
+                      },
+                      "generalStyles": {
+                        "boxShadow": {
+                          "value": "0px 0px 0px 0px #00000040"
+                        }
+                      },
+                      "properties": {
+                        "title": {
+                          "value": "Table"
+                        },
+                        "visible": {
+                          "value": "{{true}}"
+                        },
+                        "loadingState": {
+                          "value": "{{false}}"
+                        },
+                        "data": {
+                          "value": "{{ [ \n\t\t{ id: 1, name: 'Sarah', email: 'sarah@example.com'}, \n\t\t{ id: 2, name: 'Lisa', email: 'lisa@example.com'}, \n\t\t{ id: 3, name: 'Sam', email: 'sam@example.com'}, \n\t\t{ id: 4, name: 'Jon', email: 'jon@example.com'} \n] }}"
+                        },
+                        "useDynamicColumn": {
+                          "value": "{{false}}"
+                        },
+                        "columnData": {
+                          "value": "{{[{name: 'email', key: 'email'}, {name: 'Full name', key: 'name', isEditable: true}]}}"
+                        },
+                        "rowsPerPage": {
+                          "value": "{{10}}"
+                        },
+                        "serverSidePagination": {
+                          "value": "{{false}}"
+                        },
+                        "enableNextButton": {
+                          "value": "{{true}}"
+                        },
+                        "enablePrevButton": {
+                          "value": "{{true}}"
+                        },
+                        "totalRecords": {
+                          "value": ""
+                        },
+                        "enablePagination": {
+                          "value": "{{true}}"
+                        },
+                        "serverSideSort": {
+                          "value": "{{false}}"
+                        },
+                        "serverSideFilter": {
+                          "value": "{{false}}"
+                        },
+                        "displaySearchBox": {
+                          "value": "{{true}}"
+                        },
+                        "showDownloadButton": {
+                          "value": "{{true}}"
+                        },
+                        "showFilterButton": {
+                          "value": "{{true}}"
+                        },
+                        "autogenerateColumns": {
+                          "value": true,
+                          "generateNestedColumns": true
+                        },
+                        "columns": {
+                          "value": [
+                            {
+                              "name": "id",
+                              "id": "e3ecbf7fa52c4d7210a93edb8f43776267a489bad52bd108be9588f790126737",
+                              "autogenerated": true
+                            },
+                            {
+                              "name": "name",
+                              "id": "5d2a3744a006388aadd012fcc15cc0dbcb5f9130e0fbb64c558561c97118754a",
+                              "autogenerated": true
+                            },
+                            {
+                              "name": "email",
+                              "id": "afc9a5091750a1bd4760e38760de3b4be11a43452ae8ae07ce2eebc569fe9a7f",
+                              "autogenerated": true
+                            }
+                          ]
+                        },
+                        "showBulkUpdateActions": {
+                          "value": "{{true}}"
+                        },
+                        "showBulkSelector": {
+                          "value": "{{false}}"
+                        },
+                        "highlightSelectedRow": {
+                          "value": "{{false}}"
+                        },
+                        "columnSizes": {
+                          "value": "{{({})}}"
+                        },
+                        "actions": {
+                          "value": []
+                        },
+                        "enabledSort": {
+                          "value": "{{true}}"
+                        },
+                        "hideColumnSelectorButton": {
+                          "value": "{{false}}"
+                        },
+                        "defaultSelectedRow": {
+                          "value": "{{{\"id\":1}}}"
+                        },
+                        "showAddNewRowButton": {
+                          "value": "{{true}}"
+                        },
+                        "allowSelection": {
+                          "value": "{{true}}"
+                        }
+                      },
+                      "general": {},
+                      "exposedVariables": {}
+                    },
+                    "name": "table1",
+                    "displayName": "Table",
+                    "description": "Display paginated tabular data",
+                    "component": "Table",
+                    "defaultSize": {
+                      "width": 28.86,
+                      "height": 456
+                    },
+                    "exposedVariables": {
+                      "selectedRow": {},
+                      "changeSet": {},
+                      "dataUpdates": [],
+                      "pageIndex": 1,
+                      "searchText": "",
+                      "selectedRows": [],
+                      "filters": []
+                    },
+                    "actions": [
+                      {
+                        "handle": "setPage",
+                        "displayName": "Set page",
+                        "params": [
+                          {
+                            "handle": "page",
+                            "displayName": "Page",
+                            "defaultValue": "{{1}}"
+                          }
+                        ]
+                      },
+                      {
+                        "handle": "selectRow",
+                        "displayName": "Select row",
+                        "params": [
+                          {
+                            "handle": "key",
+                            "displayName": "Key"
+                          },
+                          {
+                            "handle": "value",
+                            "displayName": "Value"
+                          }
+                        ]
+                      },
+                      {
+                        "handle": "deselectRow",
+                        "displayName": "Deselect row"
+                      },
+                      {
+                        "handle": "discardChanges",
+                        "displayName": "Discard Changes"
+                      },
+                      {
+                        "handle": "discardNewlyAddedRows",
+                        "displayName": "Discard newly added rows"
+                      },
+                      {
+                        "displayName": "Download table data",
+                        "handle": "downloadTableData",
+                        "params": [
+                          {
+                            "handle": "type",
+                            "displayName": "Type",
+                            "options": [
+                              {
+                                "name": "Download as Excel",
+                                "value": "xlsx"
+                              },
+                              {
+                                "name": "Download as CSV",
+                                "value": "csv"
+                              },
+                              {
+                                "name": "Download as PDF",
+                                "value": "pdf"
+                              }
+                            ],
+                            "defaultValue": "{{Download as Excel}}",
+                            "type": "select"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "layouts": {
+                    "desktop": {
+                      "top": 20,
+                      "left": 9.30232558139535,
+                      "width": 36,
+                      "height": 510
+                    }
+                  },
+                  "withDefaultChildren": false
+                },
+                "00c209ff-f849-4da8-955e-3413a5a23afc": {
+                  "component": {
+                    "properties": {
+                      "text": {
+                        "type": "code",
+                        "displayName": "Button Text",
+                        "validation": {
+                          "schema": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "loadingState": {
+                        "type": "toggle",
+                        "displayName": "Loading State",
+                        "validation": {
+                          "schema": {
+                            "type": "boolean"
+                          }
+                        }
+                      }
+                    },
+                    "general": {
+                      "tooltip": {
+                        "type": "code",
+                        "displayName": "Tooltip",
+                        "validation": {
+                          "schema": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "others": {
+                      "showOnDesktop": {
+                        "type": "toggle",
+                        "displayName": "Show on desktop"
+                      },
+                      "showOnMobile": {
+                        "type": "toggle",
+                        "displayName": "Show on mobile"
+                      }
+                    },
+                    "events": {
+                      "onClick": {
+                        "displayName": "On click"
+                      },
+                      "onHover": {
+                        "displayName": "On hover"
+                      }
+                    },
+                    "styles": {
+                      "backgroundColor": {
+                        "type": "color",
+                        "displayName": "Background color",
+                        "validation": {
+                          "schema": {
+                            "type": "string"
+                          },
+                          "defaultValue": false
+                        }
+                      },
+                      "textColor": {
+                        "type": "color",
+                        "displayName": "Text color",
+                        "validation": {
+                          "schema": {
+                            "type": "string"
+                          },
+                          "defaultValue": false
+                        }
+                      },
+                      "loaderColor": {
+                        "type": "color",
+                        "displayName": "Loader color",
+                        "validation": {
+                          "schema": {
+                            "type": "string"
+                          },
+                          "defaultValue": false
+                        }
+                      },
+                      "visibility": {
+                        "type": "toggle",
+                        "displayName": "Visibility",
+                        "validation": {
+                          "schema": {
+                            "type": "boolean"
+                          },
+                          "defaultValue": false
+                        }
+                      },
+                      "disabledState": {
+                        "type": "toggle",
+                        "displayName": "Disable",
+                        "validation": {
+                          "schema": {
+                            "type": "boolean"
+                          },
+                          "defaultValue": false
+                        }
+                      },
+                      "borderRadius": {
+                        "type": "number",
+                        "displayName": "Border radius",
+                        "validation": {
+                          "schema": {
+                            "type": "number"
+                          },
+                          "defaultValue": false
+                        }
+                      },
+                      "borderColor": {
+                        "type": "color",
+                        "displayName": "Border color",
+                        "validation": {
+                          "schema": {
+                            "type": "string"
+                          },
+                          "defaultValue": false
+                        }
+                      }
+                    },
+                    "validate": true,
+                    "generalStyles": {
+                      "boxShadow": {
+                        "type": "boxShadow",
+                        "displayName": "Box Shadow"
+                      }
+                    },
+                    "definition": {
+                      "others": {
+                        "showOnDesktop": {
+                          "value": "{{true}}"
+                        },
+                        "showOnMobile": {
+                          "value": "{{false}}"
+                        }
+                      },
+                      "events": [],
+                      "styles": {
+                        "backgroundColor": {
+                          "value": "#375FCF"
+                        },
+                        "textColor": {
+                          "value": "#fff"
+                        },
+                        "loaderColor": {
+                          "value": "#fff"
+                        },
+                        "visibility": {
+                          "value": "{{true}}"
+                        },
+                        "borderRadius": {
+                          "value": "{{0}}"
+                        },
+                        "borderColor": {
+                          "value": "#375FCF"
+                        },
+                        "disabledState": {
+                          "value": "{{false}}"
+                        }
+                      },
+                      "generalStyles": {
+                        "boxShadow": {
+                          "value": "0px 0px 0px 0px #00000040"
+                        }
+                      },
+                      "properties": {
+                        "text": {
+                          "value": "Button"
+                        },
+                        "loadingState": {
+                          "value": "{{false}}"
+                        }
+                      },
+                      "general": {},
+                      "exposedVariables": {}
+                    },
+                    "name": "button1",
+                    "displayName": "Button",
+                    "description": "Trigger actions: queries, alerts etc",
+                    "component": "Button",
+                    "defaultSize": {
+                      "width": 3,
+                      "height": 30
+                    },
+                    "exposedVariables": {
+                      "buttonText": "Button"
+                    },
+                    "actions": [
+                      {
+                        "handle": "click",
+                        "displayName": "Click"
+                      },
+                      {
+                        "handle": "setText",
+                        "displayName": "Set Text",
+                        "params": [
+                          {
+                            "handle": "text",
+                            "displayName": "Text",
+                            "defaultValue": "New Text"
+                          }
+                        ]
+                      },
+                      {
+                        "handle": "disable",
+                        "displayName": "Disable",
+                        "params": [
+                          {
+                            "handle": "disable",
+                            "displayName": "Value",
+                            "defaultValue": "{{false}}",
+                            "type": "toggle"
+                          }
+                        ]
+                      },
+                      {
+                        "handle": "visibility",
+                        "displayName": "Visibility",
+                        "params": [
+                          {
+                            "handle": "visible",
+                            "displayName": "Value",
+                            "defaultValue": "{{false}}",
+                            "type": "toggle"
+                          }
+                        ]
+                      },
+                      {
+                        "handle": "loading",
+                        "displayName": "Loading",
+                        "params": [
+                          {
+                            "handle": "loading",
+                            "displayName": "Value",
+                            "defaultValue": "{{false}}",
+                            "type": "toggle"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "layouts": {
+                    "desktop": {
+                      "top": 540,
+                      "left": 86.04651098852759,
+                      "width": 3,
+                      "height": 30
+                    }
+                  },
+                  "withDefaultChildren": false
+                }
+              },
+              "handle": "home",
+              "name": "Home"
+            }
+          },
+          "globalSettings": {
+            "hideHeader": false,
+            "appInMaintenance": false,
+            "canvasMaxWidth": 100,
+            "canvasMaxWidthType": "%",
+            "canvasMaxHeight": 2400,
+            "canvasBackgroundColor": "#F2F2F5",
+            "backgroundFxQuery": ""
+          }
+        },
+        "appId": "cd3f3a6d-3d55-4e31-ad50-6a7b06751fe5",
+        "currentEnvironmentId": "2079f783-c1ad-4a45-bfcd-91236e1ee830",
+        "createdAt": "2023-10-30T20:02:57.426Z",
+        "updatedAt": "2023-10-30T20:03:37.300Z"
       }
     ],
     "appEnvironments": [
@@ -2280,6 +3323,102 @@
         "options": null,
         "createdAt": "2023-10-30T19:28:41.435Z",
         "updatedAt": "2023-10-30T19:28:41.435Z"
+      },
+      {
+        "id": "253a5832-2ef7-47ce-833f-55b64bc29ab5",
+        "dataSourceId": "10abef5b-4cca-4a30-bc5a-5506c171fa8c",
+        "environmentId": "2ed8fc14-4532-43f1-8cb6-97331472fdae",
+        "options": {},
+        "createdAt": "2023-10-30T20:02:57.361Z",
+        "updatedAt": "2023-10-30T20:02:57.361Z"
+      },
+      {
+        "id": "3e9ae1ff-89ba-40b0-bf72-848d2d5e9c89",
+        "dataSourceId": "6fc66420-256f-4975-a220-6280683c428c",
+        "environmentId": "2ed8fc14-4532-43f1-8cb6-97331472fdae",
+        "options": {},
+        "createdAt": "2023-10-30T20:02:57.361Z",
+        "updatedAt": "2023-10-30T20:02:57.361Z"
+      },
+      {
+        "id": "f7478d63-25cd-450e-ace0-0ea0419ef298",
+        "dataSourceId": "d9ceb31c-58f7-462b-81a4-1422f58cda84",
+        "environmentId": "2ed8fc14-4532-43f1-8cb6-97331472fdae",
+        "options": {},
+        "createdAt": "2023-10-30T20:02:57.361Z",
+        "updatedAt": "2023-10-30T20:02:57.361Z"
+      },
+      {
+        "id": "af50c5c4-b417-4250-a270-6ad9920c6a51",
+        "dataSourceId": "9c83f711-d9a7-48db-9b69-ca5231f7aba7",
+        "environmentId": "2ed8fc14-4532-43f1-8cb6-97331472fdae",
+        "options": {},
+        "createdAt": "2023-10-30T20:02:57.361Z",
+        "updatedAt": "2023-10-30T20:02:57.361Z"
+      },
+      {
+        "id": "6922ec41-05e0-4247-adad-27c8960f74aa",
+        "dataSourceId": "10abef5b-4cca-4a30-bc5a-5506c171fa8c",
+        "environmentId": "2079f783-c1ad-4a45-bfcd-91236e1ee830",
+        "options": {},
+        "createdAt": "2023-10-30T20:02:57.361Z",
+        "updatedAt": "2023-10-30T20:02:57.361Z"
+      },
+      {
+        "id": "f021cb5e-60a7-4d2c-b370-aaaddd0289c6",
+        "dataSourceId": "6fc66420-256f-4975-a220-6280683c428c",
+        "environmentId": "2079f783-c1ad-4a45-bfcd-91236e1ee830",
+        "options": {},
+        "createdAt": "2023-10-30T20:02:57.361Z",
+        "updatedAt": "2023-10-30T20:02:57.361Z"
+      },
+      {
+        "id": "05aef2e1-9a83-4465-bf0a-c11788cb3390",
+        "dataSourceId": "d9ceb31c-58f7-462b-81a4-1422f58cda84",
+        "environmentId": "2079f783-c1ad-4a45-bfcd-91236e1ee830",
+        "options": {},
+        "createdAt": "2023-10-30T20:02:57.361Z",
+        "updatedAt": "2023-10-30T20:02:57.361Z"
+      },
+      {
+        "id": "ca270349-5457-42e3-9f0d-ab5d64c2fc57",
+        "dataSourceId": "9c83f711-d9a7-48db-9b69-ca5231f7aba7",
+        "environmentId": "2079f783-c1ad-4a45-bfcd-91236e1ee830",
+        "options": {},
+        "createdAt": "2023-10-30T20:02:57.361Z",
+        "updatedAt": "2023-10-30T20:02:57.361Z"
+      },
+      {
+        "id": "06ba31f1-f2d8-4a05-9583-4ee0c486fb93",
+        "dataSourceId": "10abef5b-4cca-4a30-bc5a-5506c171fa8c",
+        "environmentId": "40c7b9c7-a24d-4bde-8ce5-ba0f917c26a7",
+        "options": {},
+        "createdAt": "2023-10-30T20:02:57.361Z",
+        "updatedAt": "2023-10-30T20:02:57.361Z"
+      },
+      {
+        "id": "7ed6ab82-3812-408d-9249-568fdf599be4",
+        "dataSourceId": "6fc66420-256f-4975-a220-6280683c428c",
+        "environmentId": "40c7b9c7-a24d-4bde-8ce5-ba0f917c26a7",
+        "options": {},
+        "createdAt": "2023-10-30T20:02:57.361Z",
+        "updatedAt": "2023-10-30T20:02:57.361Z"
+      },
+      {
+        "id": "08881dd7-5c40-4577-9553-6fc7ff985cf5",
+        "dataSourceId": "d9ceb31c-58f7-462b-81a4-1422f58cda84",
+        "environmentId": "40c7b9c7-a24d-4bde-8ce5-ba0f917c26a7",
+        "options": {},
+        "createdAt": "2023-10-30T20:02:57.361Z",
+        "updatedAt": "2023-10-30T20:02:57.361Z"
+      },
+      {
+        "id": "8e52128a-7aae-4e71-9e79-62c47e565154",
+        "dataSourceId": "9c83f711-d9a7-48db-9b69-ca5231f7aba7",
+        "environmentId": "40c7b9c7-a24d-4bde-8ce5-ba0f917c26a7",
+        "options": {},
+        "createdAt": "2023-10-30T20:02:57.361Z",
+        "updatedAt": "2023-10-30T20:02:57.361Z"
       }
     ],
     "schemaDetails": {
