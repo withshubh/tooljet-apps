@@ -2,7 +2,7 @@
   "appV2": {
     "id": "cd3f3a6d-3d55-4e31-ad50-6a7b06751fe5",
     "type": "front-end",
-    "name": "My app 1698694121296",
+    "name": "Customer Support",
     "slug": "cd3f3a6d-3d55-4e31-ad50-6a7b06751fe5",
     "isPublic": null,
     "isMaintenanceOn": false,
@@ -12,7 +12,7 @@
     "userId": "aa31b817-1dbd-4d58-8d96-72fe62f627ea",
     "createdAt": "2023-10-30T19:28:41.296Z",
     "creationMode": "DEFAULT",
-    "updatedAt": "2023-10-30T19:28:41.293Z",
+    "updatedAt": "2023-10-30T19:38:53.613Z",
     "editingVersion": {
       "id": "5b401403-f144-4c41-bc87-ed8488b4604b",
       "name": "v1",
@@ -39,7 +39,7 @@
       "appId": "cd3f3a6d-3d55-4e31-ad50-6a7b06751fe5",
       "currentEnvironmentId": "2ed8fc14-4532-43f1-8cb6-97331472fdae",
       "createdAt": "2023-10-30T19:28:41.318Z",
-      "updatedAt": "2023-10-30T19:28:45.599Z"
+      "updatedAt": "2023-10-30T19:38:40.119Z"
     },
     "dataQueries": [],
     "dataSources": [
@@ -119,7 +119,7 @@
         "appId": "cd3f3a6d-3d55-4e31-ad50-6a7b06751fe5",
         "currentEnvironmentId": "2ed8fc14-4532-43f1-8cb6-97331472fdae",
         "createdAt": "2023-10-30T19:28:41.318Z",
-        "updatedAt": "2023-10-30T19:28:45.599Z"
+        "updatedAt": "2023-10-30T19:38:40.119Z"
       }
     ],
     "appEnvironments": [
